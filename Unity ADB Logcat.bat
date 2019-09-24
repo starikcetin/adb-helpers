@@ -1,0 +1,1 @@
+powershell adb logcat -s Unity DEBUG
