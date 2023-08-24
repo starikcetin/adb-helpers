@@ -10,11 +10,11 @@ KEY_ALIAS=""
 KEY_PASS=""
 
 printUsage() {
-    echo "Usage: install-abb --bundle <ABB_PATH> [--ks <KEYSTORE_PATH> --ks-pass <KEYSTORE_PASS> --ks-key-alias <KEY_ALIAS> --key-pass <KEY_PASS>]"
+    echo "Usage: install-abb --bundle <ABB_PATH> [--ks <KEYSTORE_PATH> --ks-pass <KEYSTORE_PASS> --key <KEY_ALIAS> --key-pass <KEY_PASS>]"
     echo "  --bundle ABB_PATH: Path to the ABB file. Required."
     echo "  --ks KEYSTORE_PATH: Path to the ABB file."
     echo "  --ks-pass KEYSTORE_PASS: Path to the ABB file."
-    echo "  --ks-key-alias KEY_ALIAS: Path to the ABB file."
+    echo "  --key KEY_ALIAS: Path to the ABB file."
     echo "  --key-pass KEY_PASS: Path to the ABB file."
 }
 
@@ -23,7 +23,7 @@ while [ "${1:-}" != "" ]; do
         "--bundle") shift; ABB_PATH="${1}";;
         "--ks") shift; KEYSTORE_PATH="${1}";;
         "--ks-pass") shift; KEYSTORE_PASS="${1}";;
-        "--ks-key-alias") shift; KEY_ALIAS="${1}";;
+        "--key") shift; KEY_ALIAS="${1}";;
         "--key-pass") shift; KEY_PASS="${1}";;
         *)
             echo "Unrecognized opt: ${1}"
